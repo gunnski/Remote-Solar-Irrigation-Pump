@@ -1,0 +1,9 @@
+{
+  "cpu": {
+    "fqbn": "arduino:mbed_edge:edge_control",
+    "name": "Arduino Edge Control",
+    "type": "serial"
+  },
+  "secrets": [],
+  "included_libs": []
+}
