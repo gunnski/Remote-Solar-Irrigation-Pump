@@ -8,11 +8,10 @@
   By: Gunnar Blomquist
 */
 
+// Include the following libraries:
 #include <Arduino_EdgeControl.h>  // general library for edge
-// #include "Helpers.h"             // library for RTC
-#include <list>  // for zone Ordering control
 
-
+// Finite State Machine: Initialize varaibles:
 int state = 0;  // Finite State Machine
 bool pressureError = false;
 bool lowVoltageError = false;
@@ -20,20 +19,28 @@ double pressure = 0;
 double voltqge = 0;
 double batteryPercentage = 0;
 
-std::list<int> zoneOrder = { 1, 2, 3, 4, 5, 6 };
-int valveZone = 1;
-int numberOfZones = 6;
+// Initialize Relay Outputs here:
+int pumpSolenoid = HIGH;
+int valveOne;
+int valveTwo;
+  // etc.
 
+// Zone Valve parameters:
+int valveZone = 1;
+const int numberOfZones = 6;
+
+// System constant parameters during operation:
 const int minBatteryPercent = 20;    // the minumim discharge level of battery in percentage
 const int maxBatteryPercent = 80;    // the necessary battery percentage threshold needed to operate the system
 const int minimumPumpPressure = 10;  // minumin allowed pump pressure in psi
 const int PumpDuration = 15;         // Duration of pump operation in minutes
 
-void nextZone() {
-  /* Advance the queue when called */
+// Advance the queue when called:
+void nextZone() { 
   valveZone = (valveZone > numberOfZones) ? valveZone = 1 : ++valveZone;
 }
 
+// Define states:
 enum State {
   ERRORSTATE,
   IDLE,
@@ -42,11 +49,13 @@ enum State {
   PUMPSTOP
 };
 
-void error() {
-  // call this state when water tank is empty and wait for reset
+// this state is called when water tank is empty; wait for reset.
+void error(){
+
 
 };
 
+// This state is called when system is idle.
 void idle() {
   // meassure voltage here
   // batteryPercentage = map(voltage, 0,255, 0, 100);
@@ -62,6 +71,7 @@ void idle() {
   }
 }
 
+// This state is called when the pump should start.
 void pumpStart() {
   unsigned long pressureStartTime = millis();
   // turn valve & inverter on
@@ -76,6 +86,7 @@ void pumpStart() {
   }
 }
 
+// This state is called if the pump successfully starts; countdown begins
 void pumpRun() {
   // check pressure is >= 10 psi via pressure input
   // check battery life is >= 20% via voltage input
@@ -91,20 +102,19 @@ void pumpRun() {
   }
 }
 
+// This state always follows PUMPRUN state to discontinue the operation.
 void pumpStop() {
   // turn valve & inverter off
 }
 
-int pumpSolenoid = HIGH;
-int valveOne;
-int valveTwo;
-
+// Setup stuff here to run once:
 void setup() {
   // pumpSolenoid = pinMode(1,OUTPUT)
   // valveOne = pinMode(2,OUTPUT);
   // valveTwo = pinMode(3,OUTPUT);
 }
 
+// Main code loop here:
 void loop() {
   switch (state) {
     case ERRORSTATE:
