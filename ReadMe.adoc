@@ -16,5 +16,8 @@ Thin is the location of the code development for the Offgrid Solar Irrigation Ca
 
 https://drive.google.com/drive/folders/1OC2LOvfvoRQMiLNDkcjEEgQd0ed32whu
 
+2. Onshape - Original design of the skid, part models, and a basic rain water collection idea. 
+
+https://cad.onshape.com/documents/2a26568aabda4f27cc459c94/w/9f47c9ae6de155bdd2cd9205/e/d863c7d1090a392398fba123
 
 
