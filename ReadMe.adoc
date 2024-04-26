@@ -1,58 +1,20 @@
 :Author: gunnski
 :Email: gunnarblom24497@gmail.com
-:Date: 21/03/2024
-:Revision: version#
+:Date: 2024-04-25
+:Revision: 1
 :License: Public Domain
 
 = Project: Remote-Solar-Irrigation-Pump
 
-Find Resources to the project here:
+
+==Description:
+
+Thin is the location of the code development for the Offgrid Solar Irrigation Capstone Project originally by WSU-V students, Emily, Nate, and Gunnar sponsored by TSMC Washington (formerly WaferTech). 
+
+==Resources:
+1. Google Drive containing original design and construction documents. 
 
 https://drive.google.com/drive/folders/1OC2LOvfvoRQMiLNDkcjEEgQd0ed32whu
 
 
-Description:
 
-== Step 1: Installation
-
-1. Open this file
-2. Connect Arduino Edge Control Board.
-3. Verify and Upload to the board.
-
-== Step 2: Assemble the circuit
-
-Assemble the circuit following the diagram layout.png attached to the sketch
-
-
-=== Folder structure
-
-....
- sketch123                => Arduino sketch folder
-  ├── sketch123.ino       => main Arduino file
-  ├── // schematics.png      => (optional) an image of the required schematics
-  ├── // layout.png          => (optional) an image of the layout
-  └── ReadMe.adoc         => this file
-....
-
-=== License
-This project is released under a Public Domain License.
-
-=== Contributing
-To contribute to this project please contact Gunnar via email.
-
-=== BOM
-Add the bill of the materials you need for this project.
-
-|===
-| ID | Part name              | Part number | Quantity
-
-| A1 | Arduino Edge Control   |             | 1
-| A2 | Arduino MKR 1310       |             | 1 (2nd optional)
-
-|===
-
-
-=== Help
-This document is written in the _AsciiDoc_ format, a markup language to describe documents.
-If you need help you can search the http://www.methods.co.nz/asciidoc[AsciiDoc homepage]
-or consult the http://powerman.name/doc/asciidoc[AsciiDoc cheatsheet]
