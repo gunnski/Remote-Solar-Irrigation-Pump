@@ -25,3 +25,7 @@ https://cad.onshape.com/documents/2a26568aabda4f27cc459c94/w/9f47c9ae6de155bdd2c
 
 https://github.com/wireviz/WireViz/tree/master
 
+
+
+== License:
+Solar-Irrigation-Pump © 2024 by Gunnar Blomquist, Emily Hickle, Nate Monti, Hannah Montgomery, Sally Hurst, & Jermey Cram is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
