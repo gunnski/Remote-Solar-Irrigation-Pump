@@ -6,6 +6,11 @@
 
 = Project: Remote-Solar-Irrigation-Pump
 
+Find Resources to the project here:
+
+https://drive.google.com/drive/folders/1OC2LOvfvoRQMiLNDkcjEEgQd0ed32whu
+
+
 Description:
 
 == Step 1: Installation
