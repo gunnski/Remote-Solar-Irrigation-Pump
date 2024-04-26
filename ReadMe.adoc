@@ -7,11 +7,11 @@
 = Project: Remote-Solar-Irrigation-Pump
 
 
-==Description:
+== Description:
 
 Thin is the location of the code development for the Offgrid Solar Irrigation Capstone Project originally by WSU-V students, Emily, Nate, and Gunnar sponsored by TSMC Washington (formerly WaferTech). 
 
-==Resources:
+== Resources:
 1. Google Drive containing original design and construction documents. 
 
 https://drive.google.com/drive/folders/1OC2LOvfvoRQMiLNDkcjEEgQd0ed32whu
